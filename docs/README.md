@@ -15,11 +15,12 @@ docs/
 │
 ├── 00_project/               # プロジェクト定義（累積的）
 ├── 10_requirements/          # 要求定義（フェーズ別）
+├── 15_tasks/                 # 実装タスク（フェーズ別）← Claude Code連携
 ├── 20_architecture/          # アーキテクチャ（累積的）
 ├── 30_interfaces/            # インターフェース定義（累積的）
-├── 40_behavior/              # 振る舞い・ロジック（ハイブリッド）
+├── 40_behavior/              # 振る舞い・ロジック（累積的＆フェーズ別）
 ├── 50_cross_cutting/         # 横断的関心事（累積的）
-├── 60_quality/               # 品質保証（ハイブリッド）
+├── 60_quality/               # 品質保証（累積的＆フェーズ別）
 ├── 70_operations/            # 運用（累積的）
 ├── 80_manuals/               # マニュアル（累積的）
 └── 90_archive/               # 完了フェーズのアーカイブ
@@ -45,6 +46,14 @@ docs/
 | 要件ロードマップ | 全体計画・フェーズ構成を把握 | [10_requirements/README.md](10_requirements/README.md) |
 | ユーザーストーリー | ユーザー視点の要求を理解 | [phase1/user_stories.md](10_requirements/phase1/user_stories.md) |
 | 要求仕様 | 機能・非機能要件の詳細 | [phase1/specifications.md](10_requirements/phase1/specifications.md) |
+
+### 実装タスクを確認・実行したいとき
+
+| ドキュメント | 目的 | パス |
+|------------|------|------|
+| タスク管理 | タスク一覧・ステータス確認 | [15_tasks/README.md](15_tasks/README.md) |
+| タスクチケット | 個別タスクの実装指示 | [15_tasks/phase1/](15_tasks/phase1/) |
+| アイデア | 検討中の機能候補 | [15_tasks/ideas.md](15_tasks/ideas.md) |
 
 ### システム構成を知りたいとき
 
@@ -118,7 +127,7 @@ docs/
 - 変更時は履歴を記録し、最新状態を維持
 
 ### フェーズ別ドキュメント
-- `10_requirements/phaseN/`, `40_behavior/use_cases/phaseN/`, `60_quality/test_plans/phaseN/`
+- `10_requirements/phaseN/`, `15_tasks/phaseN/`, `40_behavior/use_cases/phaseN/`, `60_quality/test_plans/phaseN/`
 - 各フェーズの目標と成果を明確に記録
 - 完了後は `90_archive/` にサマリを記録
 
@@ -129,6 +138,8 @@ docs/
 | PRJ | プロジェクト関連 | PRJ-001 |
 | US | ユーザーストーリー | US-001 |
 | REQ | 要求仕様（機能/非機能） | REQ-F-001, REQ-NF-001 |
+| TASK | 実装タスク | TASK-001 |
+| IDEA | 検討中アイデア | IDEA-001 |
 | ADR | アーキテクチャ決定 | ADR-001 |
 | API | APIエンドポイント | API-001 |
 | SCR | 画面 | SCR-001 |

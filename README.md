@@ -18,6 +18,21 @@ PoCを超えた規模のプロジェクトでは、コーディングツール�
 3. [docs/README.md](docs/README.md) でドキュメント構造を把握
 4. プロジェクトに必要なドキュメントを選択・記述
 
+## Claude Code中心のAIコーディング戦略
+1. 並列開発：git worktreeで「モジュールごとに別窓」を作る
+
+    基本は1モジュール1 Claude Codeで実装することで、それぞれのconflictは最小限に抑えられる
+
+2. Markdownによるタスクチケット管理
+
+    Claude Codeに投げる指示をMarkdownで書き、そのファイルをそのまま渡す
+
+    "スラッシュコマンド＋Markdownファイルパス指定"で、実装↔レビューを強制ループ
+
+    常に並列稼働させるために「次にやるタスク」をストックしておく
+
+3. ★（考え中）：：：tddとexpertの統合ができるか？expertにtddの各フェーズのSKILLを参照させるようにするか...？
+
 ## ドキュメント構造
 
 ```
@@ -183,6 +198,8 @@ docs/
 ## 参考
 
 - [ソフトウェアプロジェクトドキュメント 上流工程ガイド](https://github.com/osawa-naotaka/vanishtodo/blob/main/doc/software_project_documents.md)
+- https://zenn.dev/mkj/articles/868e0723efa060
+
 
 ## ライセンス
 

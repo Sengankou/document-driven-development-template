@@ -11,7 +11,6 @@
 ```
 10_requirements/
 ├── README.md           # このファイル（ロードマップ）
-├── backlog.md          # 将来フェーズの候補（未整理）
 ├── phase1/
 │   ├── goals.md        # Phase 1 の目標・スコープ
 │   ├── user_stories.md # Phase 1 のユーザーストーリー
@@ -21,6 +20,8 @@
 │   └── ...
 └── ...
 ```
+
+> **Note**: アイデア・バックログは [15_tasks/ideas.md](../15_tasks/ideas.md) で管理
 
 ## フェーズ別ドキュメント
 
